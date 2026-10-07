@@ -1,9 +1,3 @@
-:80 {
-    root * /usr/share/caddy
-
-    encode gzip
-
-    try_files {path} /index.html
-
-    file_server
+pltech.es {
+    reverse_proxy frontend:80
 }
